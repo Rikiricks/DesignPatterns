@@ -22,6 +22,8 @@
 
 #region Factory Method
 
+using Adapter.Features;
+
 var emailNotifier = new NotificationService(new EmailNotifierFactory());
 emailNotifier.Notify("Hi Riki");
 
@@ -75,4 +77,13 @@ await Task.WhenAll(task1, task2);
 
 printSpooler1.ProcessPrintJob();
 printSpooler2.ProcessPrintJob();
+#endregion
+
+Console.WriteLine("\n\n");
+
+#region Adapter
+
+var xmlToJsonDataConverter = new XmlToJsonAdapter(new XmlDataProvider());
+var result = xmlToJsonDataConverter.GetJsonData();
+Console.WriteLine(result);
 #endregion
