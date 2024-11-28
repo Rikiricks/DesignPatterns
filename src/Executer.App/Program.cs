@@ -1,9 +1,26 @@
-﻿
-#region Factory Method
+﻿#region Design Patterns
+//1) Creational Patterns
 
-using AbstractFactory.Factories;
-using AbstractFactory.Services;
-using Builder.Features;
+//   - Factory Method
+//   - Abstract Factory 
+//   - Builder
+//   - Singleton
+
+
+//2) Structural Patterns
+
+//   - Adapter
+//   - Decorator 
+//   - Proxy
+
+
+//3) Behavioral Patterns
+
+//   - Strategy
+//   - Observer
+#endregion
+
+#region Factory Method
 
 var emailNotifier = new NotificationService(new EmailNotifierFactory());
 emailNotifier.Notify("Hi Riki");
@@ -41,4 +58,21 @@ Email email = emailBuilder
 
 Console.WriteLine(email.ToString());
 
+#endregion
+
+Console.WriteLine("\n\n");
+
+#region Singleton
+string[] firstDocumentStrings = { "PC1_doc1", "PC1_doc2", "PC1_doc3" };
+string[] secondDocumentStrings = { "PC2_doc4", "PC2_doc5", "PC2_doc6" };
+var printSpooler1 = PrintSpooler.GetPrintSpooler();
+var printSpooler2 = PrintSpooler.GetPrintSpooler();
+
+var task1 = Task.Run(() => printSpooler1.AddPrintJob(firstDocumentStrings));
+var task2 = Task.Run(() => printSpooler2.AddPrintJob(secondDocumentStrings));
+
+await Task.WhenAll(task1, task2);
+
+printSpooler1.ProcessPrintJob();
+printSpooler2.ProcessPrintJob();
 #endregion
