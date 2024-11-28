@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Executer.App", "Executer.App\Executer.App.csproj", "{7C295C33-259E-4B67-8EE8-91E39333EA4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Executer.App", "Executer.App\Executer.App.csproj", "{7C295C33-259E-4B67-8EE8-91E39333EA4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod", "FactoryMethod\FactoryMethod.csproj", "{4BF035E5-A6CC-4876-A4E5-C79CB8737B25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryMethod", "FactoryMethod\FactoryMethod.csproj", "{4BF035E5-A6CC-4876-A4E5-C79CB8737B25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory", "AbstractFactory\AbstractFactory.csproj", "{BC3B3429-0DF0-40DE-89C6-5EC1801123F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactory", "AbstractFactory\AbstractFactory.csproj", "{BC3B3429-0DF0-40DE-89C6-5EC1801123F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder", "Builder\Builder.csproj", "{B88AAEA2-832E-4B17-8C22-9842921D6BA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{BC3B3429-0DF0-40DE-89C6-5EC1801123F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC3B3429-0DF0-40DE-89C6-5EC1801123F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC3B3429-0DF0-40DE-89C6-5EC1801123F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B88AAEA2-832E-4B17-8C22-9842921D6BA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B88AAEA2-832E-4B17-8C22-9842921D6BA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B88AAEA2-832E-4B17-8C22-9842921D6BA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B88AAEA2-832E-4B17-8C22-9842921D6BA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
