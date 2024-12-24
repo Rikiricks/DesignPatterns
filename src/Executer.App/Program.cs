@@ -22,8 +22,6 @@
 
 #region Factory Method
 
-using Adapter.Features;
-
 var emailNotifier = new NotificationService(new EmailNotifierFactory());
 emailNotifier.Notify("Hi Riki");
 
@@ -87,3 +85,29 @@ var xmlToJsonDataConverter = new XmlToJsonAdapter(new XmlDataProvider());
 var result = xmlToJsonDataConverter.GetJsonData();
 Console.WriteLine(result);
 #endregion
+
+Console.WriteLine("\n\n");
+
+#region Decorator
+
+IBankAccount account = new BasicAccount(1000);
+
+account = new OverdraftProtectionDecorator(account, 500);
+
+account = new RewardsPointsDecorator(account);
+
+account = new InterestDecorator(account, 0.05);
+
+account.Deposit(200);
+account.Withdraw(500);
+
+if (account is InterestDecorator interestAccount)
+{
+    interestAccount.ApplyInterest();
+}
+
+Console.WriteLine($"Final Balance: {account.GetBalance():C}");
+
+#endregion
+
+Console.WriteLine("\n\n");

@@ -4,3 +4,6 @@ global using FactoryMethod.Services;
 global using FactoryMethod.Factory;
 global using Builder.Features;
 global using Singleton.Features;
+global using Adapter.Features;
+global using Decorator.Features;
+global using Decorator.Decorators;
