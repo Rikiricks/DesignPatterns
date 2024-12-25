@@ -7,3 +7,5 @@ global using Singleton.Features;
 global using Adapter.Features;
 global using Decorator.Features;
 global using Decorator.Decorators;
+global using Proxy.Features;
+global using Proxy.Services;

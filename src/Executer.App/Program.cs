@@ -22,6 +22,8 @@
 
 #region Factory Method
 
+
+
 var emailNotifier = new NotificationService(new EmailNotifierFactory());
 emailNotifier.Notify("Hi Riki");
 
@@ -107,6 +109,17 @@ if (account is InterestDecorator interestAccount)
 }
 
 Console.WriteLine($"Final Balance: {account.GetBalance():C}");
+
+#endregion
+
+Console.WriteLine("\n\n");
+
+#region Proxy
+
+
+var cachedData = new CacheDataService(new RemoteDataService(), "Seed Data");
+
+cachedData.GetData();
 
 #endregion
 

@@ -13,6 +13,7 @@
     <ProjectReference Include="..\Builder\Builder.csproj" />
     <ProjectReference Include="..\Decorator\Decorator.csproj" />
     <ProjectReference Include="..\FactoryMethod\FactoryMethod.csproj" />
+    <ProjectReference Include="..\Proxy\Proxy.csproj" />
     <ProjectReference Include="..\Singleton\Singleton.csproj" />
   </ItemGroup>
 
