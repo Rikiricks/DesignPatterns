@@ -15,6 +15,7 @@
     <ProjectReference Include="..\FactoryMethod\FactoryMethod.csproj" />
     <ProjectReference Include="..\Proxy\Proxy.csproj" />
     <ProjectReference Include="..\Singleton\Singleton.csproj" />
+    <ProjectReference Include="..\Strategy\Strategy.csproj" />
   </ItemGroup>
 
 </Project>

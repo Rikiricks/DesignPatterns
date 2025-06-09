@@ -24,6 +24,9 @@
 
 
 
+using Strategy.Services;
+using Strategy.Strategies;
+
 var emailNotifier = new NotificationService(new EmailNotifierFactory());
 emailNotifier.Notify("Hi Riki");
 
@@ -124,3 +127,19 @@ cachedData.GetData();
 #endregion
 
 Console.WriteLine("\n\n");
+
+#region Strategy
+
+BillingService billingService = new BillingService(new SelfPayBilling());
+var selfPayAmount = billingService.GenerateBill(1000);
+Console.WriteLine($"Self Pay: {selfPayAmount}");
+
+billingService.SetBillingStrategy(new GovernmentInsuranceBilling());
+var govtPayAmount = billingService.GenerateBill(1000);
+Console.WriteLine($"Govt Pay: {govtPayAmount}");
+
+billingService.SetBillingStrategy(new PrivateInsuranceBilling());
+var privatePayAmount = billingService.GenerateBill(1000);
+Console.WriteLine($"Private Pay: {privatePayAmount}");
+
+#endregion
